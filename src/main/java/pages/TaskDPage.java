@@ -1,6 +1,8 @@
 package pages;
 
 import base.BasePage;
+import data.TimeWait;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -30,8 +32,9 @@ public class TaskDPage extends BasePage {
     WebElement errorMessage;
 
     public TaskDPage openingReadMore() {
-        moveToElement(readMoreButton);
-        readMoreButton.click();
+        moveToElement((WebElement) readMoreButton);
+//        readMoreButton.click();
+        click(readMoreButton, TimeWait.TIME_WAIT_3);
         return this;
     }
 

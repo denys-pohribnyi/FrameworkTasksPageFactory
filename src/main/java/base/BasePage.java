@@ -22,15 +22,16 @@ public class BasePage {
     }
 
     public void waitVisibility(WebElement element) {
-        WebDriverWait wait = new WebDriverWait(driver,5);
+        WebDriverWait wait = new WebDriverWait(driver, 5);
         wait.until(ExpectedConditions.visibilityOf(element));
     }
-    public void waitClickable(WebElement element){
-        WebDriverWait wait = new WebDriverWait(driver,5);
+
+    public void waitClickable(WebElement element) {
+        WebDriverWait wait = new WebDriverWait(driver, 5);
         wait.until(ExpectedConditions.elementToBeClickable(element)).click();
     }
 
-    public void selectByText(WebElement element, String textToSelect){
+    public void selectByText(WebElement element, String textToSelect) {
         Select select = new Select(element);
         select.selectByVisibleText(textToSelect);
     }
